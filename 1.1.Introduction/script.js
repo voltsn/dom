@@ -1,12 +1,11 @@
 // Display the document title in the console.
-let title = document.querySelector("title");
-console.log(title.textContent);
+console.log(document.title);
 
 // Change the document title to "Modifying the DOM"
-title.textContent = "Modifying the DOM";
+document.title = "Modifying the DOM";
 
 // Change the background color of the body to hot pink (#FF69B4).
-let body = document.querySelector("body");
+let body = document.body;
 body.style.backgroundColor = "#FF69B4";
 
 // Challenge try with random colors.
