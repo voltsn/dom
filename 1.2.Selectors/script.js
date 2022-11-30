@@ -25,7 +25,7 @@ let paragraphs = document.querySelectorAll("p")
 paragraphs.forEach(
   (element) => {
     let output = element.textContent;
-    if (element.classList.length !== 0) {
+    if (element.classList.length > 0) {
       output += " | class list:";
       for (let i = 0; i < element.classList.length; i++){
         output += " " + element.classList[i];
@@ -48,5 +48,7 @@ const randomColor = () => {
 }
 
 for (paragraph of paragraphs) {
-  paragraph.style.color = randomColor();
+  if (paragraph.classList.length == 0) {
+    paragraph.style.color = randomColor();
+  }
 }
